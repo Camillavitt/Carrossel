@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: font1;
+    src: url(./fonts/jackpot/);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(./fonts/sectar/Sectar.otf);
+}
+
+@font-face {
+    font-family: font3;
+    src: url(./fonts/toony_line/ToonyLine_PERSONAL_USE_ONLY.otf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+h1{
+    font-family: font3;
+    font-size: 3em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: #f9f9f9;
+}
+
+
+.container{
+    
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute; /*Torna possivel alterar a posição do container*/
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); /*alterar a posição do eixo*/
+}
+
+.navegacao {
+    position: absolute; /*Posição em relação ao container*/
+    bottom: 20px; /*Distância a partir da base*/
+    left: 50%; /*Distância a partir da esquerda*/
+    transform: translate(-50%); /*Alterar o eixo principal */
+    display: flex; /*Colocar o conteúdo lado a lado*/
+}
+
+.bar{
+    background-color: #ffffff80; /*Plano de Fundo do indicador*/
+    width: 30px; /*Largura do Indicador*/
+    height: 5px; /*Altura do Indicador*/
+    margin: 6px; /*Espaço entre os indicadores*/
+    transition: .3s; /*Transição no hover*/
+    cursor: pointer; /*Ponteiro do Mouse*/
+}
+
+input{
+    display: none; /*Ocultar as input do tipo Radio*/
+}
+
+.imagens {
+    display: flex; /*posiciona uma imagem ao lado da outra*/
+    width: 600%; /*define p tamanho da div imagens*/
+    height: 100%; /*define a altura da div imagens*/
+}
+
+.imagem{
+    width: 16.6666666667%; /*define a proporção do tamanho de cada imagem em relação ao elemento pai*/
+    transition: .5s; /*efeito na transição das imagens*/
+}
+
+.imagem img{
+    width: 100%; /*ajusta o tamanho da imagem dentro do container*/
+    height: 100%; /*ajusta o tamanho da imagem dentro do container*/
+    border-radius: 2em;
+}
+
+
+#imagem1:checked ~ .img1 {
+    margin-left: 0; /*alteração na margem esquerda*/
+}
+
+#imagem2:checked ~ .img1{
+    margin-left: -16.6666666667%;
+}
+
+#imagem3:checked ~ .img1{
+    margin-left: -33.3333333333%;
+}
+
+#imagem4:checked ~ .img1{
+    margin-left: -50%;
+}
+
+#imagem5:checked ~ .img1 {
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1 {
+    margin-left: -83.3333333333%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    transform: translate(-50%);
+}
